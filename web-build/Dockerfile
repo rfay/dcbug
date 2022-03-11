@@ -2,9 +2,6 @@
 ARG BASE_IMAGE
 FROM $BASE_IMAGE
 
-ARG username
-ARG uid
-ARG gid
 
 RUN ls
 

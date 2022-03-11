@@ -4,9 +4,6 @@ services:
     build:
       args:
         BASE_IMAGE: busybox
-        gid: "1000"
-        uid: "1000"
-        username: junker99
       context: /home/parallels/workspace/d9/.ddev/web-build
       dockerfile: ../.webimageBuild/Dockerfile
     image: busybox-built
