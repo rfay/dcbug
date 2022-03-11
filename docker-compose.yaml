@@ -10,4 +10,3 @@ services:
       context: /home/parallels/workspace/d9/.ddev/web-build
       dockerfile: ../.webimageBuild/Dockerfile
     image: busybox-built
-    restart: "no"
