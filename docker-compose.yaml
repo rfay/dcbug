@@ -1,9 +1,6 @@
-name: ddev-d9
 services:
   web:
     build:
-      args:
-        BASE_IMAGE: busybox
       context: ./web-build
-      dockerfile: ../.webimageBuild/Dockerfile
+      dockerfile: ../junk/Dockerfile
     image: busybox-built

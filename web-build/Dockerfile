@@ -1,7 +1,4 @@
-
-ARG BASE_IMAGE
-FROM $BASE_IMAGE
-
+FROM busybox
 
 RUN ls
 
