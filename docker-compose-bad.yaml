@@ -2,5 +2,5 @@ services:
   web:
     build:
       context: backend
-      #dockerfile: ../backend.Dockerfile
+      dockerfile: ../backend.Dockerfile
     image: busybox-built
