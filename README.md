@@ -1,6 +1,8 @@
 
 This repo is only here to demonstrate a docker-compose v2.3.0+ bug related to `docker-compose build` which only seems to happen on linux. The regression seems to have been introduced between v2.2.3 and v2.3.0 and currently exists in v2.3.3.
 
+The demonstration files here use the exact stuff in the spec at https://github.com/compose-spec/compose-spec/blob/master/build.md#illustrative-sample
+
 On linux:
 `docker-compose -f docker-compose-bad.yaml build` will fail with
 > * Error response from daemon: dockerfile parse error line 1: unknown instruction: .DOCKERIGNORE
