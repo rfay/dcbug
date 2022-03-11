@@ -1,5 +1,5 @@
 
-This repo is only here to demonstrate a docker-compose v2.3.3 bug related to `docker-compose build` which only seems to happen on linux.
+This repo is only here to demonstrate a docker-compose v2.3.0+ bug related to `docker-compose build` which only seems to happen on linux. The regression seems to have been introduced between v2.2.3 and v2.3.0 and currently exists in v2.3.3.
 
 On linux:
 `docker-compose -f docker-compose-bad.yaml build` will fail with
