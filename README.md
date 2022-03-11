@@ -5,7 +5,10 @@ The demonstration files here use the exact stuff in the spec at https://github.c
 
 On linux:
 `docker-compose -f docker-compose-bad.yaml build` will fail with
-> * Error response from daemon: dockerfile parse error line 1: unknown instruction: .DOCKERIGNORE
+
+```
+* Error response from daemon: dockerfile parse error line 1: unknown instruction: .DOCKERIGNORE
+```
 
 
 When the Dockerfile is in the same directory as the context, it succeeds:
