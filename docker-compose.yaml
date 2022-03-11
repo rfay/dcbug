@@ -3,11 +3,11 @@ services:
   web:
     build:
       args:
-        BASE_IMAGE: drud/ddev-webserver:v1.19.0-1
+        BASE_IMAGE: busybox
         gid: "1000"
         uid: "1000"
-        username: parallels
+        username: junker99
       context: /home/parallels/workspace/d9/.ddev/web-build
       dockerfile: ../.webimageBuild/Dockerfile
-    image: drud/ddev-webserver:v1.19.0-1-d9-built
+    image: busybox-built
     restart: "no"
