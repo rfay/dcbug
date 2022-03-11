@@ -93,34 +93,6 @@ services:
       type: volume
       volume: {}
     working_dir: /var/lib/postgresql
-  dba:
-    container_name: ddev-d9-dba
-    environment:
-      HTTP_EXPOSE: 8036:8036
-      HTTPS_EXPOSE: 8037:8036
-      PMA_PASSWORD: root
-      PMA_USER: root
-      TZ: ""
-      UPLOAD_LIMIT: 1024M
-      VIRTUAL_HOST: d9.ddev.site
-    expose:
-    - "80"
-    healthcheck:
-      interval: 2m0s
-      retries: 1
-      timeout: 2s
-    hostname: d9-dba
-    image: phpmyadmin:5
-    labels:
-      com.ddev.app-type: drupal9
-      com.ddev.approot: /home/parallels/workspace/d9
-      com.ddev.platform: ddev
-      com.ddev.site-name: d9
-    networks:
-      ddev_default: null
-      default: null
-    restart: "no"
-    working_dir: /root
   web:
     build:
       args:
