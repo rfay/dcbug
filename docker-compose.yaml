@@ -15,12 +15,6 @@ services:
         username: parallels
       context: /home/parallels/workspace/d9/.ddev/web-build
       dockerfile: ../.webimageBuild/Dockerfile
-    healthcheck:
-      interval: 1s
-      retries: 120
-      start_period: 2m0s
-      timeout: 2m0s
-    hostname: d9-web
     image: drud/ddev-webserver:v1.19.0-1-d9-built
     labels:
       com.ddev.app-type: drupal9
