@@ -1,6 +1,6 @@
 services:
   web:
     build:
-      context: ./web-build
+      context: context
       dockerfile: ../junk/Dockerfile
     image: busybox-built
