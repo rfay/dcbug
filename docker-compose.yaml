@@ -1,10 +1,4 @@
 name: ddev-d9
-networks:
-  ddev_default:
-    external: true
-    name: ddev_default
-  default:
-    name: ddev-d9_default
 services:
   web:
     build:
@@ -17,13 +11,3 @@ services:
       dockerfile: ../.webimageBuild/Dockerfile
     image: drud/ddev-webserver:v1.19.0-1-d9-built
     restart: "no"
-volumes:
-  database:
-    external: true
-    name: d9-postgres
-  ddev-global-cache:
-    external: true
-    name: ddev-global-cache
-  ddev-ssh-agent_socket_dir:
-    external: true
-    name: ddev-ssh-agent_socket_dir
