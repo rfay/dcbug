@@ -4,6 +4,6 @@ services:
     build:
       args:
         BASE_IMAGE: busybox
-      context: /home/parallels/workspace/d9/.ddev/web-build
+      context: ./web-build
       dockerfile: ../.webimageBuild/Dockerfile
     image: busybox-built
