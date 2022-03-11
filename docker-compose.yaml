@@ -16,23 +16,6 @@ services:
       context: /home/parallels/workspace/d9/.ddev/web-build
       dockerfile: ../.webimageBuild/Dockerfile
     image: drud/ddev-webserver:v1.19.0-1-d9-built
-    labels:
-      com.ddev.app-type: drupal9
-      com.ddev.approot: /home/parallels/workspace/d9
-      com.ddev.platform: ddev
-      com.ddev.site-name: d9
-    networks:
-      ddev_default: null
-      default: null
-    ports:
-    - host_ip: 127.0.0.1
-      mode: ingress
-      protocol: tcp
-      target: 80
-    - host_ip: 127.0.0.1
-      mode: ingress
-      protocol: tcp
-      target: 443
     restart: "no"
     user: 1000:1000
     volumes:
