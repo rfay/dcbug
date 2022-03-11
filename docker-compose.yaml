@@ -17,33 +17,6 @@ services:
       dockerfile: ../.webimageBuild/Dockerfile
     image: drud/ddev-webserver:v1.19.0-1-d9-built
     restart: "no"
-    user: 1000:1000
-    volumes:
-    - consistency: cached
-      source: ../
-      target: /var/www/html
-      type: bind
-    - bind:
-        create_host_path: true
-      read_only: true
-      source: /home/parallels/workspace/d9/.ddev
-      target: /mnt/ddev_config
-      type: bind
-    - bind:
-        create_host_path: true
-      read_only: true
-      source: /home/parallels/workspace/d9/.ddev/xhprof
-      target: /usr/local/bin/xhprof
-      type: bind
-    - source: ddev-global-cache
-      target: /mnt/ddev-global-cache
-      type: volume
-      volume: {}
-    - source: ddev-ssh-agent_socket_dir
-      target: /home/.ssh-agent
-      type: volume
-      volume: {}
-    working_dir: /var/www/html/
 volumes:
   database:
     external: true
